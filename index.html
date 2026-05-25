@@ -1,0 +1,526 @@
+<head>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Ton CSS custom PAR DESSUS Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Marionne Gannavi — Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+
+            <!-- Logo (navbar-left) -->
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#home">Marionne</a>
+
+                <!-- Bouton hamburger pour mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Liens du centre + icônes droite -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+
+                    <!-- navbar-center -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#my_story">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+
+                    <!-- navbar-right -->
+                    <div class="d-flex gap-3">
+                        <a href="https://github.com/Marionne2005" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mari-gannavi" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- HERO SECTION -->
+    <section id="home">
+        <div class="container text-center">
+
+            <!-- Photo ronde -->
+            <img src="images/image_1.jpeg" alt="Marionne" class="rounded-circle mb-4"
+                style="width: 200px; height: 200px; object-fit: cover;">
+
+            <!-- Nom -->
+            <h1>Marionne GANNAVI</h1>
+
+            <!-- Phrase mise à jour -->
+            <p>Engineering student passionate about solving real problems with impactful AI technologies</p>
+
+            <!-- Badges mis à jour (5 badges, domaines pas technos) -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                <span class="badge">Software Engineering</span>
+                <span class="badge">AI Integration</span>
+                <span class="badge">Backend Development</span>
+                <span class="badge">Test Automation & QA</span>
+                <span class="badge">Agile / Scrum</span>
+            </div>
+
+            <!-- Boutons (inchangés) -->
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="#my_story" class="btn">ABOUT ME</a>
+                <a href="#contact" class="btn">GET IN TOUCH</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MY STORY SECTION -->
+    <section class="my_story" id="my_story">
+        <div class="container">
+            <h2>My story</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p>I'm a young woman from Benin whose journey into programming began with a simple conversation
+                        about the endless possibilities of coding. That spark led me to move to Canada and pursue
+                        Software Engineering at the University of Ottawa.
+                        Since then, I've grown from curious beginner to QA Engineer co-op at DistillerSR, hackathon
+                        builder at uOttaHack 8, and passionate AI integrator. Every project I take on tells a story of
+                        perseverance, creativity, and a deep belief that technology should solve real problems for real
+                        people.
+                        My story is just getting started and this portfolio is a small window into my world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="text-center mb-2">Skills</h2>
+            <p class="text-center mb-5">Click on a category to see related projects</p>
+
+            <div class="row g-4">
+
+                <!-- CARD 1 : Backend Development -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card" onclick="toggleSkill('backend')">
+                        <div class="skill-card-header">
+                            <span class="skill-icon"><i class="fa-solid fa-server"></i></span>
+                            <div>
+                                <h3>Backend Development</h3>
+                                <p class="skill-subtitle">Python · FastAPI · Django</p>
+                            </div>
+                            <span class="skill-arrow" id="arrow-backend">▼</span>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="badge">Python</span>
+                            <span class="badge">FastAPI</span>
+                            <span class="badge">Django</span>
+                            <span class="badge">PostgreSQL</span>
+                            <span class="badge">REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-panel" id="panel-backend">
+                        <div class="skill-project">
+                            <h4>EloqAI v2</h4>
+                            <p>Full-stack speech improvement platform migrating from Django to FastAPI async REST API
+                                with microservices principles.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-2">
+                                <span class="badge">FastAPI</span>
+                                <span class="badge">PostgreSQL</span>
+                                <span class="badge">Docker</span>
+                                <span class="badge">Railway</span>
+                            </div>
+                            <a href="https://marionne17.pythonanywhere.com/" target="_blank">Live Demo →</a>
+                        </div>
+                        <div class="skill-project">
+                            <h4>UoBuddy</h4>
+                            <p>AI-powered platform matching students with opportunities using Gemini AI and complex
+                                relational SQL queries.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-2">
+                                <span class="badge">Supabase</span>
+                                <span class="badge">PostgreSQL</span>
+                                <span class="badge">REST APIs</span>
+                            </div>
+                            <a href="https://github.com/Marionne2005" target="_blank">GitHub →</a>
+                        </div>
+                        <div class="skill-project">
+                            <h4>uTaste</h4>
+                            <p>Multi-user Android app with role-based access managing 100+ recipes and integrating
+                                OpenFoodFacts REST API.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-2">
+                                <span class="badge">Java</span>
+                                <span class="badge">SQLite</span>
+                                <span class="badge">Android Studio</span>
+                            </div>
+                            <a href="https://github.com/Marionne2005" target="_blank">GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 : AI & Cloud Integration -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card" onclick="toggleSkill('ai')">
+                        <div class="skill-card-header">
+                            <span class="skill-icon"><i class="fa-solid fa-microchip"></i></span>
+                            <div>
+                                <h3>AI & Cloud Integration</h3>
+                                <p class="skill-subtitle">Whisper AI · Gemini · Redis</p>
+                            </div>
+                            <span class="skill-arrow" id="arrow-ai">▼</span>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="badge">Whisper AI</span>
+                            <span class="badge">Gemini AI</span>
+                            <span class="badge">Claude AI</span>
+                            <span class="badge">Redis</span>
+                            <span class="badge">Supabase</span>
+                        </div>
+                    </div>
+                    <div class="skill-panel" id="panel-ai">
+                        <div class="skill-project">
+                            <h4>EloqAI v2</h4>
+                            <p>Integrating OpenAI Whisper AI for real-time audio transcription and NLP-based speech
+                                analysis with Redis caching.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-2">
+                                <span class="badge">Whisper AI</span>
+                                <span class="badge">Redis</span>
+                                <span class="badge">NLP</span>
+                            </div>
+                            <a href="https://marionne17.pythonanywhere.com/" target="_blank">Live Demo →</a>
+                        </div>
+                        <div class="skill-project">
+                            <h4>UoBuddy — uOttaHack 8</h4>
+                            <p>Event-driven architecture using Solace PubSub+ for real-time AI opportunity matching
+                                generating 15+ personalized results per student.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-2">
+                                <span class="badge">Gemini AI</span>
+                                <span class="badge">Solace PubSub+</span>
+                                <span class="badge">Event-Driven</span>
+                            </div>
+                            <a href="https://github.com/Marionne2005" target="_blank">GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 : QA & Test Automation -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card" onclick="toggleSkill('qa')">
+                        <div class="skill-card-header">
+                            <span class="skill-icon"><i class="fa-solid fa-bug-slash"></i></span>
+                            <div>
+                                <h3>QA & Test Automation</h3>
+                                <p class="skill-subtitle">Cypress · Gherkin · CI/CD</p>
+                            </div>
+                            <span class="skill-arrow" id="arrow-qa">▼</span>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="badge">Cypress</span>
+                            <span class="badge">Gherkin BDD</span>
+                            <span class="badge">JavaScript</span>
+                            <span class="badge">Jira</span>
+                            <span class="badge">CI/CD</span>
+                        </div>
+                    </div>
+                    <div class="skill-panel" id="panel-qa">
+                        <div class="skill-project">
+                            <h4>DistillerSR — Co-op</h4>
+                            <p>Developed and maintained automated end-to-end test scripts using Cypress and Gherkin BDD,
+                                improving bug resolution turnaround across multiple sprint cycles.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-2">
+                                <span class="badge">Cypress</span>
+                                <span class="badge">Gherkin</span>
+                                <span class="badge">Jira</span>
+                                <span class="badge">Agile/Scrum</span>
+                            </div>
+                            <a href="https://www.distillersr.com" target="_blank">DistillerSR →</a>
+                        </div>
+                        <div class="skill-project">
+                            <h4>EloqAI v2</h4>
+                            <p>Containerizing with Docker and deploying via Railway with CI/CD pipelines designed to
+                                handle concurrent users at scale.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-2">
+                                <span class="badge">Docker</span>
+                                <span class="badge">CI/CD</span>
+                                <span class="badge">Railway</span>
+                            </div>
+                            <a href="https://marionne17.pythonanywhere.com/" target="_blank">Live Demo →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 : Agile & Collaboration -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card" onclick="toggleSkill('agile')">
+                        <div class="skill-card-header">
+                            <span class="skill-icon"><i class="fa-solid fa-people-group"></i></span>
+                            <div>
+                                <h3>Agile & Collaboration</h3>
+                                <p class="skill-subtitle">Scrum · Git · Jira</p>
+                            </div>
+                            <span class="skill-arrow" id="arrow-agile">▼</span>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="badge">Agile/Scrum</span>
+                            <span class="badge">Git & GitHub</span>
+                            <span class="badge">Jira</span>
+                            <span class="badge">Bitbucket</span>
+                            <span class="badge">Documentation</span>
+                        </div>
+                    </div>
+                    <div class="skill-panel" id="panel-agile">
+                        <div class="skill-project">
+                            <h4>DistillerSR — Co-op</h4>
+                            <p>Participated in sprint planning, reviews and retrospectives within an Agile Scrum
+                                workflow contributing to QA coverage across multiple sprint cycles.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-2">
+                                <span class="badge">Scrum</span>
+                                <span class="badge">Jira</span>
+                                <span class="badge">Bitbucket</span>
+                            </div>
+                            <a href="https://www.distillersr.com" target="_blank">DistillerSR →</a>
+                        </div>
+                        <div class="skill-project">
+                            <h4>UoBuddy — uOttaHack 8</h4>
+                            <p>Delivered a working demo at uOttaHack 8 collaborating in a team under time pressure to
+                                build a full AI-powered platform.</p>
+                            <div class="d-flex flex-wrap gap-1 mb-2">
+                                <span class="badge">Teamwork</span>
+                                <span class="badge">GitHub</span>
+                                <span class="badge">Hackathon</span>
+                            </div>
+                            <a href="https://github.com/Marionne2005" target="_blank">GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="how_i_work">
+        <div class="container">
+            <h2 class="text-center mb-2">How I Work</h2>
+            <p class="text-center mb-5">My approach to every project</p>
+
+            <!-- 3 étapes animées -->
+            <div class="row g-4 mb-5 text-center">
+
+                <div class="col-md-4 work-step">
+                    <div class="work-step-card">
+                        <span class="work-icon">🔍</span>
+                        <h3>Understand</h3>
+                        <p>I start by deeply understanding the problem not jumping straight to code. The right solution
+                            starts with the right questions.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 work-step">
+                    <div class="work-step-card">
+                        <span class="work-icon">🛠️</span>
+                        <h3>Build</h3>
+                        <p>I choose the right tools for the job whether it's FastAPI, AI integration, or test automation
+                            and build iteratively.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 work-step">
+                    <div class="work-step-card">
+                        <span class="work-icon">✅</span>
+                        <h3>Deliver</h3>
+                        <p>I ship with quality in mind CI/CD, documentation, and real-world testing ensure what I build
+                            actually works.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Texte court -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <p>Every experience I've had  whether in a co-op, a
+                        hackathon, or a personal project  has taught me the
+                        same lesson : show up, ask questions without hesitation,
+                        and adapt fast. Curiosity and humility aren't weaknesses
+                        in a professional environment they're recognised as
+                        strengths.I don't wait to know everything before I start. I learn
+                        by doing, document as I go, and deliver with intention.
+                        Whether it's backend engineering, AI integration, or
+                        quality assurance  I bring the same mindset to every
+                        challenge : understand the problem deeply before touching
+                        the code.I'm currently expanding into <strong>UI/UX Design</strong>
+                        through
+                        <a href="https://www.uottawa.ca/course/seg3525" target="_blank">
+                            SEG3525</a> at the University of Ottawa, guided by
+                        principles from
+                        <a href="https://www.nngroup.com" target="_blank">
+                            Nielsen Norman Group</a> because I believe that great
+                        engineers don't just build systems that work, they build
+                        systems that matter to people.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <h2 class="text-center mb-2">UI/UX Designs</h2>
+            <p class="text-center mb-5">Projects created as part of SEG3525 -
+                User Interface Design & Analysis · University of Ottawa</p>
+
+            <div class="row g-4">
+
+                <!-- Design 1 : Site de services -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="placeholder-card">
+                        <div class="placeholder-image">
+                            <span class="placeholder-number">01</span>
+                        </div>
+                        <div class="placeholder-body">
+                            <span class="badge coming-soon">Coming Soon</span>
+                            <h3>Service Website</h3>
+                            <p>A professional service website design — hair salon, dentist, or bike repair shop.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design 2 : Jeu de mémoire -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="placeholder-card">
+                        <div class="placeholder-image">
+                            <span class="placeholder-number">02</span>
+                        </div>
+                        <div class="placeholder-body">
+                            <span class="badge coming-soon">Coming Soon</span>
+                            <h3>Memory Game</h3>
+                            <p>An interactive memory card game with engaging UI and smooth animations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design 3 : E-commerce -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="placeholder-card">
+                        <div class="placeholder-image">
+                            <span class="placeholder-number">03</span>
+                        </div>
+                        <div class="placeholder-body">
+                            <span class="badge coming-soon">Coming Soon</span>
+                            <h3>E-Commerce Website</h3>
+                            <p>A complete online store design with product listings, cart, and checkout flow.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design 4 : BI/Visualisation -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="placeholder-card">
+                        <div class="placeholder-image">
+                            <span class="placeholder-number">04</span>
+                        </div>
+                        <div class="placeholder-body">
+                            <span class="badge coming-soon">Coming Soon</span>
+                            <h3>Data Visualization</h3>
+                            <p>An analytics dashboard design for sports, finance, or business intelligence.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2>Contact Me</h2>
+                <p>If you have any questions or want to work together,
+                    feel free to reach out!</p>
+            </div>
+
+            <!-- 4 Cards -->
+            <div class="row g-4 mb-5 justify-content-center">
+
+                <!-- Card CV -->
+                <div class="col-md-6 col-lg-3">
+                    <a href="https://raw.githubusercontent.com/Marionne2005/portfolio-uottawa/main/assets/MARIONNE_RESUME-6.pdf"
+                        target="_blank" class="contact-card text-decoration-none">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <h3>Resume</h3>
+                        <p>View my CV</p>
+                    </a>
+                </div>
+
+                <!-- Card Phone -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+1 (613) 276-7337</p>
+                    </div>
+                </div>
+
+                <!-- Card Email -->
+                <div class="col-md-6 col-lg-3">
+                    <a href="mailto:marionnegannavi@gmail.com" class="contact-card text-decoration-none">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>marionnegannavi@gmail.com</p>
+                    </a>
+                </div>
+
+                <!-- Card LinkedIn -->
+                <div class="col-md-6 col-lg-3">
+                    <a href="https://www.linkedin.com/in/mari-gannavi" target="_blank"
+                        class="contact-card text-decoration-none">
+                        <i class="fab fa-linkedin-in"></i>
+                        <h3>LinkedIn</h3>
+                        <p>mari-gannavi</p>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Formulaire -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject">
+                        </div>
+                        <div class="mt-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="button" class="btn" onclick="sendMessage()">
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Ton JS -->
+    <script src="javas.js"></script>
+</body>
